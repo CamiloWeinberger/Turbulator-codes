@@ -73,7 +73,7 @@ Also, it is protected to switch on the fun before the power supply.
 
 ## Matlab controller
 
-Only fors for T-800 turbulador by serial-port. 
+Only works with T-800 turbulador by serial-port. 
 ```
 Do not use the Arduino library in matlab!!!
 ```
