@@ -55,7 +55,7 @@ else {
     pot = 0;
 }
 ```
-Also es protected to switch on the fun before the power supply.
+Also, it is protected to switch on the fun before the power supply.
 
 ``` c++
     if (dif == 0) {
