@@ -9,7 +9,7 @@ Fans: San Ace 120W: 9WV1248P1J001
 ```
 
 It must be considered that the Arduino frequency was adjusted for 25kHz, by the code:
-``` python
+``` c++
 TCCR3A = 0X00; //pin2,3,5 (3,5 turb)
 TCCR3B = 0X12;
 ICR3 = 40;
@@ -19,7 +19,7 @@ This means that the PWM work for values of [0-40].
 ## Arduino folder for T-800
 Same specifications for Mark1.9, but includes libraries of
 
-``` arduino
+``` c++
 //sensor temp y humedad
 #include <dht11.h>
 dht11 DHT;
@@ -38,7 +38,7 @@ Also, is connected and controlled by serial port as 57600 bauds/sec.
 The airflow depens of the Turbulator size, so this value is not include in the code.
 #
 This code includes an automatical switch for the fans and the potentiomenter. And includes a delay to turn-off the systen and keep safe the turbulator.
-``` arduino
+``` c++
 int relayvent = 40;
 int relaypot = 41;
 if (map(t1 - t3, 0, 1023, 0, 6000) >= 100) {
@@ -57,7 +57,7 @@ else {
 ```
 Also es protected to switch on the fun before the power supply.
 
-```arduino
+``` c++
     if (dif == 0) {
       digitalWrite(relaypot, HIGH);
       digitalWrite(variac, LOW);
