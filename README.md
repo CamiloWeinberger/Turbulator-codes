@@ -9,7 +9,7 @@ Fans: San Ace 120W: 9WV1248P1J001
 ```
 
 It must be considered that the Arduino frequency was adjusted for 25kHz, by the code:
-``` arduino
+``` python
 TCCR3A = 0X00; //pin2,3,5 (3,5 turb)
 TCCR3B = 0X12;
 ICR3 = 40;
